@@ -11,3 +11,7 @@ git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer c
 git commit (para escribir los cambios en la rama Master)
 git show (para mostrar el histórico de cambios en detalle)
 comando escape de panel de comentarios = esc + shift +zz
+
+>>reset peligroso 
+git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)
+git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los cambios para commit en staging)
