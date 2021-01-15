@@ -1,7 +1,22 @@
 body
 {
-    text-align: center;
+    text-align: left;
     font-family: "monospace";
     color: black;
+    font-size: 16px;
 
 }
+
+#container 
+{
+    width: 90%;
+    padding: 1em;
+    text-align: left;
+    border: 1 px solid blanchedalmond;
+}
+
+#post
+{
+    width: 100 px;
+}
+
