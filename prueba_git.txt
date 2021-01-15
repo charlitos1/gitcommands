@@ -1,3 +1,4 @@
 Prueba de git desde windows
 
 > git init: Para iniciar la bdd y la creación del repositorio
+> repaso de principales comandos git
