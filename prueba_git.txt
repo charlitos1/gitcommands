@@ -2,3 +2,12 @@ Prueba de git desde windows
 
 > git init: Para iniciar la bdd y la creación del repositorio
 > repaso de principales comandos git
+> BASICOS:
+git config
+git config --global user.name
+git config --global user.email
+git status
+git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer commit)
+git commit (para escribir los cambios en la rama Master)
+git show (para mostrar el histórico de cambios en detalle)
+
