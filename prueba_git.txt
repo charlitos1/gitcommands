@@ -10,4 +10,4 @@ git status
 git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer commit)
 git commit (para escribir los cambios en la rama Master)
 git show (para mostrar el histórico de cambios en detalle)
-
+comando escape de panel de comentarios = esc + shift +zz
