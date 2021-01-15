@@ -15,3 +15,13 @@ comando escape de panel de comentarios = esc + shift +zz
 >>reset peligroso 
 git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)
 git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los cambios para commit en staging)
+
+>> diff
+git diff muestra el contenido del archivo con las más recientes modificaciones entre los commits. Suele usarse como un método de comparación ¿qué cambios ocurrieron entre un commit y otro?
+
+>> git reset HEAD
+nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anterior. Si los archivos venían de Unstaged, vuelven allí. Y lo mismo se venían de Untracked.
+
+>> git rm: este comando necesita alguno de los siguientes argumentos para poder ejecutarse correctamente:
+- git rm --cached: Mueve los archivos que le indiquemos al estado Untracked.
+- git rm --force: Elimina los archivos de Git y del disco duro. Git guarda el registro de la existencia de los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
