@@ -27,7 +27,7 @@ git commit (para escribir los cambios en la rama Master)<br>
 git show (para mostrar el histórico de cambios en detalle)<br>
 comando escape de panel de comentarios = esc + shift +zz<br><br>
 
->>reset peligroso <br>
+>>RESET PELIGROSO <br>
 git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)<br>
 git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los cambios para commit en staging)<br>
 
@@ -60,7 +60,17 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.<br>
     git log – index.html- Busca los commits en un archivo en específico.<br>
     git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.<br>
-    git log > log.txt - guardar los logs en un archivo txt</p>
+    git log > log.txt - guardar los logs en un archivo txt</p><br>
+
+    <p>
+        ABRIENDO UNA RAMA DE DESARROLLO <br><br>
+     Estando en el master se ejecuta el comando que abre ramas para desarrollo:<br>
+
+     git branch + [nombre de la rama a trabajar: ej cabecera]: abre la rama<br><br>
+
+        >>hacemos git status para verificar la apertura de la rama<br>
+        >> git checkout cabecera<br>
+    </p>
         </div>
 
     </div>
