@@ -25,7 +25,11 @@ body
 {
     background-color:black;
     font-family: monospace;
+<<<<<<< HEAD
     color: rgb(9, 253, 70);
+=======
+    color: rgb(0, 247, 62);
+>>>>>>> cabecera
     font-size: 25px;
     margin: 0;
     padding: 0.5em;
