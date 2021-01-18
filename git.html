@@ -139,6 +139,8 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 |                 |<br>
 +----[SHA256]-----+<br>
 </p>
+        <strong><h3>COMMIT DE LA LLAVE SSH DESDE EL FICHERO DEL PROYECTO</h3></strong>
+        $ git commit -am "ssh"<br>
 
         <P><strong><h3>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</h3></strong>
             >> eval $(ssh-agent -s) <br>
@@ -168,6 +170,14 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git tag -d + [nombre del tag]<br>
     Para eliminar referencia entera de un tag en GitHub:<br>
     git push origin :refs/tags/[nombre de tag]<br><br>
+
+    <strong><h3>AÑADIENDO COLABORADORES A REPOSITORIOS en GitHub</h3></strong>
+    Si el proyecto es público, cualquier programador podrá tener acceso en GitHub solo con clonar el repositorio,
+    no obstante no podrán hacer git push a master ni ramas si antes no tienen privilegios o han sido invitados por 
+    el admin. <br>
+
+    Ir a SETTINGS >> Manage acces >> Invite a Collaborators: Allí se configura el acceso vía mail o usuario de GitHub. 
+
 
 
 
