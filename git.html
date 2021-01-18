@@ -153,8 +153,18 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 
     >> Se configura ahora la URL para ssh<br>
 
-    git remote set-url origin git@github.com:email1/gitcommands.git<br>
+    git remote set-url origin git@github.com:email1/gitcommands.git<br><br>
 
+    <strong>AÑADIENDO Y ELIMINANDO TAGS EN COMMITS</strong><br>
+
+    git tag -a v0.1 -m "EJ: Primer repositorio en Git" 87322fb55a103a9a15a8ae15bf3065a31388e7a8: Agrega un tag<br>
+    git show-ref --tags: Muestra los tags del repositorio<br><br>
+
+    Después de incluir un tag se debe, por buena práctica, hacer un git pull y git push al master<br>
+    Para eliminar un tag:<br>
+    git tag -d + [nombre del tag]<br>
+    Para eliminar referencia entera de un tag en GitHub:<br>
+    git push origin :refs/tags/[nombre de tag]
 
 
     
