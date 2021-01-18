@@ -31,7 +31,11 @@ git status<br>
 git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer commit)<br>
 git commit (para escribir los cambios en la rama Master)<br>
 git show (para mostrar el histórico de cambios en detalle)<br>
-comando escape de panel de comentarios = esc + shift +zz<br><br>
+comando escape de panel VIM = esc + shift +zz<br>
+git log muestra el listado de commit, ids, título y responsable <br>
+git show: muestra detalles del último commit y su responsable<br>
+
+                
 
                 >><strong>RESET PELIGROSO </strong> <br>
 git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)<br>
@@ -45,7 +49,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 
 >> git rm: este comando necesita alguno de los siguientes argumentos para poder ejecutarse correctamente:<br>
 - git rm --cached: Mueve los archivos que le indiquemos al estado Untracked.<br>
-- git rm --force: Elimina los archivos de Git y del disco duro. Git guarda el registro de la existencia de los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).<br>
+- git rm --force: Elimina los archivos de Git y del disco duro. Git guarda el registro de la existencia de los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).<br><br>
 
 
 >> Algunos comandos que pueden ayudar cuando colaboren con proyectos muy grandes de github:<br><br>
@@ -55,7 +59,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git log --stat - Explica el número de líneas que se cambiaron brevemente.<br>
     git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.<br>
     git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.<br>
-    git log --graph --oneline --decorate y<br>
+    git log --all --graph --oneline --decorate Muestra al detalle las ediciones en master y ramasm merges y ediciones por título<br>
     git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.<br>
     git log -3 - Limitamos el número de commits.<br>
     git log --after=“2018-1-2” ,<br>
