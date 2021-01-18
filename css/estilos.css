@@ -23,9 +23,9 @@ body
 
 #cabecera 
 {
-    background-color:black;
+    background-color:rgb(102, 255, 102);
     font-family: monospace;
-    color: rgb(9, 253, 70);
+    color: rgb(0, 0, 0);
     font-size: 25px;
     margin: 0;
     padding: 0.5em;
