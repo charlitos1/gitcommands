@@ -19,7 +19,7 @@
             <h1>></h1>
             <h2>Estudiando comandos básicos de Git</h2> 
             
-            <p>INICIACIÓN</p>
+            <p><strong>INICIACIÓN</strong></p>
 
             <p> > git init: Para iniciar la bdd y la creación del repositorio<br><br>
         
@@ -70,7 +70,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git log > log.txt - guardar los logs en un archivo txt</p><br>
 
     <p>
-        ABRIENDO UNA RAMA DE DESARROLLO <br><br>
+        <strong>ABRIENDO UNA RAMA DE DESARROLLO</strong> <br><br>
      Estando en el master se ejecuta el comando que abre ramas para desarrollo:<br>
 
      git branch + [nombre de la rama a trabajar: ej cabecera]: abre la rama<br><br>
@@ -80,19 +80,19 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     </p>
 
     <p>
-        FUSIONANDO RAMAS Y MASTER<br><br>
+        <strong>FUSIONANDO RAMAS Y MASTER</strong><br><br>
     Luego de modificar las ramas, nos ubicamos en el master y hacemos merge<br>
 
     >>git merge + [nombre de rama]<br>
     >>git -am "fusión de rama con últimos cambios"</p>
     
-    <p>SOLUCIONANDO CONFLICTOS CON MERGE</p>
+    <p><strong> CONFLICTOS CON MERGE</strong></p>
     
     <p>Si existen cambios en paralelo justo en las mismas líneas de códigos y en los mismos archivos entre ramas Master y derivadas de desarrollo<br>
     entonces se generará un conflicto en el merge.<br>
     La forma de solucionarlo es ubicar la colisión cuya sintaxis la mostrará el editor de código y escoger cuál cambio de implementará.</p>
             
-       <p>PULL y PUSH A GitHub</p>
+       <p><strong>PULL y PUSH A GitHub</strong> </p>
     
        <p> >>Cargar un Nuevo Repositorio a GitHub<br>
             
@@ -105,7 +105,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
            >> Si queremos traer cambios desde el master de GitHub al master Local el comando usado es:<br>
              git pull origin master <br></p>
         
-        <p>CREANDO LLAVES SSH<br><br>
+        <p><strong> LLAVES SSH </strong><br><br>
             >>Desde la consola o el GitBash ubicarse en el directorio ~ <br>
             
             $ ssh-keygen -t rsa -b 4096 -C "email@email"<br>
@@ -134,7 +134,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 +----[SHA256]-----+<br>
 </p>
 
-        <p>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH<br><br>
+        <P><strong>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</strong><br><br>
             >> eval $(ssh-agent -s) <br>
         Esto genera una respuesta de este tipo y confirma el funcionamiento:<br>
         Agent pid 1435<br>
