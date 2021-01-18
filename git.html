@@ -23,7 +23,7 @@
 
             <p> > git init: Para iniciar la bdd y la creación del repositorio<br><br>
         
-<strong>BASICOS:</strong><br>
+<strong><h3>BASICOS:</h3></strong>
 git config<br>
 git config --global user.name<br>
 git config --global user.email<br>
@@ -33,11 +33,14 @@ git commit (para escribir los cambios en la rama Master)<br>
 git show (para mostrar el histórico de cambios en detalle)<br>
 comando escape de panel VIM = esc + shift +zz<br>
 git log muestra el listado de commit, ids, título y responsable <br>
-git show: muestra detalles del último commit y su responsable<br><br>
+git show: muestra detalles del último commit y su responsable<br>
+git show-branch: muestra la historia de ediciones en las branchs
+git show-branch --all muestra la historia de las ediciones en las branchs con más detalles
+gitk: muestra una interfaz gráfica sobre la evolución del proyecto, en todas sus ramas y procesos
 
                 
 
-                >><strong>RESET PELIGROSO </strong> <br>
+>><strong><h3>RESET PELIGROSO</h3> </strong>
 git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)<br>
 git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los cambios para commit en staging)<br>
 
@@ -73,7 +76,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git log > log.txt - guardar los logs en un archivo txt</p><br>
 
     <p>
-        <strong>ABRIENDO UNA RAMA DE DESARROLLO</strong> <br><br>
+        <strong> <h3>ABRIENDO UNA RAMA DE DESARROLLO </h3></strong>
      Estando en el master se ejecuta el comando que abre ramas para desarrollo:<br>
 
      git branch + [nombre de la rama a trabajar: ej cabecera]: abre la rama<br><br>
@@ -83,19 +86,19 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     </p>
 
     <p>
-        <strong>FUSIONANDO RAMAS Y MASTER</strong><br><br>
+        <strong><h3>FUSIONANDO RAMAS Y MASTER</h3></strong><br><br>
     Luego de modificar las ramas, nos ubicamos en el master y hacemos merge<br>
 
     >>git merge + [nombre de rama]<br>
     >>git -am "fusión de rama con últimos cambios"</p>
     
-    <p><strong> CONFLICTOS CON MERGE</strong></p>
+    <p><strong> <h3>CONFLICTOS CON MERGE</h3></strong></p>
     
     <p>Si existen cambios en paralelo justo en las mismas líneas de códigos y en los mismos archivos entre ramas Master y derivadas de desarrollo<br>
     entonces se generará un conflicto en el merge.<br>
     La forma de solucionarlo es ubicar la colisión cuya sintaxis la mostrará el editor de código y escoger cuál cambio de implementará.</p>
             
-       <p><strong>PULL y PUSH A GitHub</strong> </p>
+       <p><strong><h3>PULL y PUSH A GitHub</h3></strong> </p>
     
        <p> >>Cargar un Nuevo Repositorio a GitHub<br>
             
@@ -108,7 +111,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
            >> Si queremos traer cambios desde el master de GitHub al master Local el comando usado es:<br>
              git pull origin master <br></p>
         
-        <p><strong> LLAVES SSH </strong><br><br>
+        <p><strong> <h3>LLAVES SSH</h3> </strong><br>
             >>Desde la consola o el GitBash ubicarse en el directorio ~ <br>
             
             $ ssh-keygen -t rsa -b 4096 -C "email@email"<br>
@@ -137,7 +140,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 +----[SHA256]-----+<br>
 </p>
 
-        <P><strong>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</strong><br><br>
+        <P><strong><h3>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</h3></strong>
             >> eval $(ssh-agent -s) <br>
         Esto genera una respuesta de este tipo y confirma el funcionamiento:<br>
         Agent pid 1435<br>
@@ -145,7 +148,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
         Luego activamos la llave en el entorno con el comando: <br>
         $ ssh-add ~/.ssh/id_rsa<br><br>
     
-    <strong>CONFIGURANDO URL PARA ACCESO SSH A REPOSITORIO EN GITHUB</strong><br>
+    <strong><h3>CONFIGURANDO URL PARA ACCESO SSH A REPOSITORIO EN GITHUB</h3></strong>
 
     >> Se confirman las versiones de acceso remoto:<br>
 
@@ -155,7 +158,7 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
 
     git remote set-url origin git@github.com:email1/gitcommands.git<br><br>
 
-    <strong>AÑADIENDO Y ELIMINANDO TAGS EN COMMITS</strong><br>
+    <strong><h3>AÑADIENDO Y ELIMINANDO TAGS EN COMMITS</h3></strong>
 
     git tag -a v0.1 -m "EJ: Primer repositorio en Git" 87322fb55a103a9a15a8ae15bf3065a31388e7a8: Agrega un tag<br>
     git show-ref --tags: Muestra los tags del repositorio<br><br>
@@ -164,7 +167,10 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     Para eliminar un tag:<br>
     git tag -d + [nombre del tag]<br>
     Para eliminar referencia entera de un tag en GitHub:<br>
-    git push origin :refs/tags/[nombre de tag]
+    git push origin :refs/tags/[nombre de tag]<br><br>
+
+
+
 
 
     
