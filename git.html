@@ -1,212 +1,254 @@
 <!DOCTYPE html>
 <html lang=”en”>
+
 <head>
     <meta charset=”UTF-8″ />
-    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>GIT</title>
 </head>
+
 <body>
     <div id="container">
         <div class="logo">
-            <img style= "width: 150px; height: 60px;" src="https://git-scm.com/images/logos/downloads/Git-Logo-White.png">
+            <img style="width: 150px; height: 60px;"
+                src="https://git-scm.com/images/logos/downloads/Git-Logo-White.png">
         </div>
         <h1> Git y GitHub</h1>
-        
+
         <spam id="tagline">COMANDOS</spam>
 
-        </div>
-        <div id="post">
-            <h1>></h1>
-            <h2>Lista de comandos básicos de Git</h2> 
-            
-            <p><strong>INICIACIÓN</strong></p>
+    </div>
+    <div id="post">
+        <h1>></h1>
+        <h2>Lista de comandos básicos de Git</h2>
 
-            <p> > git init: Para iniciar la bdd y la creación del repositorio<br><br>
-        
-<strong><h3>BÁSICOS:</h3></strong>
-git config<br>
-git config --global user.name<br>
-git config --global user.email<br>
-git status<br>
-git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer commit)<br>
-git commit (para escribir los cambios en la rama Master)<br>
-git show (para mostrar el histórico de cambios en detalle)<br>
-comando escape de panel VIM = esc + shift +zz<br>
-git log muestra el listado de commit, ids, título y responsable <br>
-git show: muestra detalles del último commit y su responsable<br>
-git show-branch: muestra la historia de ediciones en las branchs<br>
-git show-branch --all muestra la historia de las ediciones en las branchs con más detalles<br>
-gitk: muestra una interfaz gráfica sobre la evolución del proyecto, en todas sus ramas y procesos<br>
+        <p><strong>INICIACIÓN</strong></p>
 
-                
+        <p> > git init: Para iniciar la bdd y la creación del repositorio<br><br>
 
-<strong><h3>RESET PELIGROSO</h3> </strong>
-git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese punto, un retorno en el tiempo)<br>
-git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los cambios para commit en staging)<br>
-
->> diff
-git diff muestra el contenido del archivo con las más recientes modificaciones entre los commits. Suele usarse como un método de comparación ¿qué cambios ocurrieron entre un commit y otro?<br><br>
-
->> git reset HEAD
-nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anterior. Si los archivos venían de Unstaged, vuelven allí. Y lo mismo se venían de Untracked.<br>
-
->> git rm: este comando necesita alguno de los siguientes argumentos para poder ejecutarse correctamente:<br>
-- git rm --cached: Mueve los archivos que le indiquemos al estado Untracked.<br>
-- git rm --force: Elimina los archivos de Git y del disco duro. Git guarda el registro de la existencia de los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).<br><br>
+            <strong>
+                <h3>BÁSICOS:</h3>
+            </strong>
+            git config<br>
+            git config --global user.name<br>
+            git config --global user.email<br>
+            git status<br>
+            git add . / git add + [nombre del archivo] (para guardar cambios y luego hacer commit)<br>
+            git commit (para escribir los cambios en la rama Master)<br>
+            git show (para mostrar el histórico de cambios en detalle)<br>
+            comando escape de panel VIM = esc + shift +zz<br>
+            git log muestra el listado de commit, ids, título y responsable <br>
+            git show: muestra detalles del último commit y su responsable<br>
+            git show-branch: muestra la historia de ediciones en las branchs<br>
+            git show-branch --all muestra la historia de las ediciones en las branchs con más detalles<br>
+            gitk: muestra una interfaz gráfica sobre la evolución del proyecto, en todas sus ramas y procesos<br>
 
 
->> Algunos comandos que pueden ayudar cuando colaboren con proyectos muy grandes de github:<br><br>
 
-    git log --oneline - Te muestra el id commit y el título del commit.<br>
-    git log --decorate- Te muestra donde se encuentra el head point en el log.<br>
-    git log --stat - Explica el número de líneas que se cambiaron brevemente.<br>
-    git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.<br>
-    git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.<br>
-    git log --all --graph --oneline --decorate Muestra al detalle las ediciones en master y ramasm merges y ediciones por título<br>
-    git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.<br>
-    git log -3 - Limitamos el número de commits.<br>
-    git log --after=“2018-1-2” ,<br>
-    git log --after=“today” y<br>
-    git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.<br>
-    git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.<br>
-    git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.<br>
-    git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.<br>
-    git log – index.html- Busca los commits en un archivo en específico.<br>
-    git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.<br>
-    git log > log.txt - guardar los logs en un archivo txt</p><br>
+            <strong>
+                <h3>RESET PELIGROSO</h3>
+            </strong>
+            git reset + id commit Número 2 posterior al originario + hard (borra todos los demás commit hechos hasta ese
+            punto, un retorno en el tiempo)<br>
+            git reset + id commit Número 2 posterior al originario + soft (vuelve a la versión indicada, pero guarda los
+            cambios para commit en staging)<br>
 
-    <p>
-        <strong> <h3>ABRIENDO UNA RAMA DE DESARROLLO Y ENVIANDO A GitHub </h3></strong>
-     Estando en el master se ejecuta el comando que abre ramas para desarrollo:<br>
+            >> diff
+            git diff muestra el contenido del archivo con las más recientes modificaciones entre los commits. Suele
+            usarse como un método de comparación ¿qué cambios ocurrieron entre un commit y otro?<br><br>
 
-     git branch + [nombre de la rama a trabajar: ej cabecera]: abre la rama<br><br>
+            >> git reset HEAD
+            nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anterior. Si los archivos venían
+            de Unstaged, vuelven allí. Y lo mismo se venían de Untracked.<br>
 
-        >>hacemos git status para verificar la apertura de la rama<br>
-        >> git checkout + nombre de rama (ej: cabecera): Hace swtich a la rama en cuestión<br>
-        >> git push origin + nombre de rama: envía la rama creada de local a GitHub
-    </p>
+            >> git rm: este comando necesita alguno de los siguientes argumentos para poder ejecutarse
+            correctamente:<br>
+            - git rm --cached: Mueve los archivos que le indiquemos al estado Untracked.<br>
+            - git rm --force: Elimina los archivos de Git y del disco duro. Git guarda el registro de la existencia de
+            los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más
+            avanzados).<br><br>
 
-    <p>
-        <strong><h3>FUSIONANDO RAMAS Y MASTER</h3></strong><br><br>
-    Luego de modificar las ramas, nos ubicamos en el master y hacemos merge<br>
 
-    >>git merge + [nombre de rama]<br>
-    >>git -am "fusión de rama con últimos cambios"</p>
-    
-    <p><strong> <h3>CONFLICTOS CON MERGE</h3></strong></p>
-    
-    <p>Si existen cambios en paralelo justo en las mismas líneas de códigos y en los mismos archivos entre ramas Master y derivadas de desarrollo<br>
-    entonces se generará un conflicto en el merge.<br>
-    La forma de solucionarlo es ubicar la colisión cuya sintaxis la mostrará el editor de código y escoger cuál cambio de implementará.</p>
-            
-       <p><strong><h3>PULL y PUSH A GitHub</h3></strong> </p>
-    
-       <p> >>Cargar un Nuevo Repositorio a GitHub<br>
-            
-             >>Crear nuevo repositorio, copiar dirección HTTPS para Origin<br>
-            
+            >> Algunos comandos que pueden ayudar cuando colaboren con proyectos muy grandes de github:<br><br>
+
+            git log --oneline - Te muestra el id commit y el título del commit.<br>
+            git log --decorate- Te muestra donde se encuentra el head point en el log.<br>
+            git log --stat - Explica el número de líneas que se cambiaron brevemente.<br>
+            git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.<br>
+            git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus
+            commits.<br>
+            git log --all --graph --oneline --decorate Muestra al detalle las ediciones en master y ramasm merges y
+            ediciones por título<br>
+            git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los
+            commits.<br>
+            git log -3 - Limitamos el número de commits.<br>
+            git log --after=“2018-1-2” ,<br>
+            git log --after=“today” y<br>
+            git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.<br>
+            git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.<br>
+            git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.<br>
+            git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.<br>
+            git log – index.html- Busca los commits en un archivo en específico.<br>
+            git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.<br>
+            git log > log.txt - guardar los logs en un archivo txt
+        </p><br>
+
+        <p>
+            <strong>
+                <h3>ABRIENDO UNA RAMA DE DESARROLLO Y ENVIANDO A GitHub </h3>
+            </strong>
+            Estando en el master se ejecuta el comando que abre ramas para desarrollo:<br>
+
+            git branch + [nombre de la rama a trabajar: ej cabecera]: abre la rama<br><br>
+
+            >>hacemos git status para verificar la apertura de la rama<br>
+            >> git checkout + nombre de rama (ej: cabecera): Hace swtich a la rama en cuestión<br>
+            >> git push origin + nombre de rama: envía la rama creada de local a GitHub
+        </p>
+
+        <p>
+            <strong>
+                <h3>FUSIONANDO RAMAS Y MASTER</h3>
+            </strong><br><br>
+            Luego de modificar las ramas, nos ubicamos en el master y hacemos merge<br>
+
+            >>git merge + [nombre de rama]<br>
+            >>git -am "fusión de rama con últimos cambios"
+        </p>
+
+        <p><strong>
+                <h3>CONFLICTOS CON MERGE</h3>
+            </strong></p>
+
+        <p>Si existen cambios en paralelo justo en las mismas líneas de códigos y en los mismos archivos entre ramas
+            Master y derivadas de desarrollo<br>
+            entonces se generará un conflicto en el merge.<br>
+            La forma de solucionarlo es ubicar la colisión cuya sintaxis la mostrará el editor de código y escoger cuál
+            cambio de implementará.</p>
+
+        <p><strong>
+                <h3>PULL y PUSH A GitHub</h3>
+            </strong> </p>
+
+        <p> >>Cargar un Nuevo Repositorio a GitHub<br>
+
+            >>Crear nuevo repositorio, copiar dirección HTTPS para Origin<br>
+
             >>Ir a gitbash (Local) y para llevar a GitHub el master de nuestro proyecto usar el comando:<br>
-             git remote add origin + HTTPS (EJ:https://github.com/charlitos1/gitcommands.git)<br>
-             git push origin master <br>
+            git remote add origin + HTTPS (EJ:https://github.com/charlitos1/gitcommands.git)<br>
+            git push origin master <br>
 
-           >> Si queremos traer cambios desde el master de GitHub al master Local el comando usado es:<br>
-             git pull origin master <br></p>
-        
-        <p><strong> <h3>LLAVES SSH</h3> </strong><br>
+            >> Si queremos traer cambios desde el master de GitHub al master Local el comando usado es:<br>
+            git pull origin master <br></p>
+
+        <p><strong>
+                <h3>LLAVES SSH</h3>
+            </strong><br>
             >>Desde la consola o el GitBash ubicarse en el directorio ~ <br>
-            
+
             $ ssh-keygen -t rsa -b 4096 -C "email@email"<br>
             Este comando creará llaves públicas y privadas y emitirá este mensaje:</p>
 
         <p>Generating public/private rsa key pair.<br>
-        Enter file in which to save the key (/c/Users/perio/.ssh/id_rsa):<br>
-        Created directory '/c/Users/Laptop/.ssh'.<br>
-        Enter passphrase (empty for no passphrase):<br>
-        Enter same passphrase again:<br>
-        Your identification has been saved in /c/Users/perio/.ssh/id_rsa<br>
-        Your public key has been saved in /c/Users/perio/.ssh/id_rsa.pub<br>
-        The key fingerprint is:<br>
-        SHA256:yVh0Yf9G3N51lILhWAlLdR+qNn/gCFUUPjLhXQelnxA email@email<br>
-        The key's randomart image is:<br>
-+---[RSA 4096]----+<br>
-|        .+O@*E.==|<br>
-|       .ooO-o*==o|<br>
-|       ..+ O.+=.+|<br>
-|       +..= Bo.o=|<br>
-|      . S. 1 oo.+|<br>
-|             .   |<br>
-|                 |<br>
-|                 |<br>
-|                 |<br>
-+----[SHA256]-----+<br>
-</p>
-        <strong><h3>COMMIT DE LA LLAVE SSH DESDE EL FICHERO DEL PROYECTO</h3></strong>
+            Enter file in which to save the key (/c/Users/perio/.ssh/id_rsa):<br>
+            Created directory '/c/Users/Laptop/.ssh'.<br>
+            Enter passphrase (empty for no passphrase):<br>
+            Enter same passphrase again:<br>
+            Your identification has been saved in /c/Users/perio/.ssh/id_rsa<br>
+            Your public key has been saved in /c/Users/perio/.ssh/id_rsa.pub<br>
+            The key fingerprint is:<br>
+            SHA256:yVh0Yf9G3N51lILhWAlLdR+qNn/gCFUUPjLhXQelnxA email@email<br>
+            The key's randomart image is:<br>
+            +---[RSA 4096]----+<br>
+            | .+O@*E.==|<br>
+            | .ooO-o*==o|<br>
+            | ..+ O.+=.+|<br>
+            | +..= Bo.o=|<br>
+            | . S. 1 oo.+|<br>
+            | . |<br>
+            | |<br>
+            | |<br>
+            | |<br>
+            +----[SHA256]-----+<br>
+        </p>
+        <strong>
+            <h3>COMMIT DE LA LLAVE SSH DESDE EL FICHERO DEL PROYECTO</h3>
+        </strong>
         $ git commit -am "ssh"<br>
 
-        <P><strong><h3>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</h3></strong>
+        <P><strong>
+                <h3>EVALUANDO FUNCIONAMIENTO DE LA LLAVE SSH</h3>
+            </strong>
             >> eval $(ssh-agent -s) <br>
-        Esto genera una respuesta de este tipo y confirma el funcionamiento:<br>
-        Agent pid 1435<br>
+            Esto genera una respuesta de este tipo y confirma el funcionamiento:<br>
+            Agent pid 1435<br>
 
-        Luego activamos la llave en el entorno con el comando: <br>
-        $ ssh-add ~/.ssh/id_rsa<br><br>
-    
-    <strong><h3>CONFIGURANDO URL PARA ACCESO SSH A REPOSITORIO EN GITHUB</h3></strong>
+            Luego activamos la llave en el entorno con el comando: <br>
+            $ ssh-add ~/.ssh/id_rsa<br><br>
 
-    >> Se confirman las versiones de acceso remoto:<br>
+            <strong>
+                <h3>CONFIGURANDO URL PARA ACCESO SSH A REPOSITORIO EN GITHUB</h3>
+            </strong>
 
-    git remote -v (Ejemplo Origin)<br><br>
+            >> Se confirman las versiones de acceso remoto:<br>
 
-    >> Se configura ahora la URL para ssh<br>
+            git remote -v (Ejemplo Origin)<br><br>
 
-    git remote set-url origin git@github.com:email1/gitcommands.git<br><br>
+            >> Se configura ahora la URL para ssh<br>
 
-    <strong><h3>AÑADIENDO Y ELIMINANDO TAGS EN COMMITS</h3></strong>
+            git remote set-url origin git@github.com:email1/gitcommands.git<br><br>
 
-    git tag -a v0.1 -m "EJ: Primer repositorio en Git" 87322fb55a103a9a15a8ae15bf3065a31388e7a8: Agrega un tag<br>
-    git show-ref --tags: Muestra los tags del repositorio<br><br>
+            <strong>
+                <h3>AÑADIENDO Y ELIMINANDO TAGS EN COMMITS</h3>
+            </strong>
 
-    Después de incluir un tag se debe, por buena práctica, hacer un git pull y git push al master<br>
-    Para eliminar un tag:<br>
-    git tag -d + [nombre del tag]<br>
-    Para eliminar referencia entera de un tag en GitHub:<br>
-    git push origin :refs/tags/[nombre de tag]<br><br>
+            git tag -a v0.1 -m "EJ: Primer repositorio en Git" 87322fb55a103a9a15a8ae15bf3065a31388e7a8: Agrega un
+            tag<br>
+            git show-ref --tags: Muestra los tags del repositorio<br><br>
 
-<<<<<<< HEAD
-    <strong><h3>AÑADIENDO COLABORADORES A REPOSITORIOS en GitHub</h3></strong>
-    Si el proyecto es público, cualquier programador podrá tener acceso en GitHub solo con clonar el repositorio,
-    no obstante no podrán hacer git push a master ni ramas si antes no tienen privilegios o han sido invitados por 
-    el admin. <br>
+            Después de incluir un tag se debe, por buena práctica, hacer un git pull y git push al master<br>
+            Para eliminar un tag:<br>
+            git tag -d + [nombre del tag]<br>
+            Para eliminar referencia entera de un tag en GitHub:<br>
+            git push origin :refs/tags/[nombre de tag]<br><br>
 
-    Ir a SETTINGS >> Manage acces >> Invite a Collaborators: Allí se configura el acceso vía mail o usuario de GitHub. 
+            <strong>
+                <h3>AÑADIENDO COLABORADORES A REPOSITORIOS en GitHub</h3>
+            </strong>
+            Si el proyecto es público, cualquier programador podrá tener acceso en GitHub solo con clonar el
+            repositorio,
+            no obstante no podrán hacer git push a master ni ramas si antes no tienen privilegios o han sido invitados
+            por
+            el admin. <br>
+
+            Ir a SETTINGS >> Manage acces >> Invite a Collaborators: Allí se configura el acceso vía mail o usuario de
+            GitHub.
 
 
 
 
 
 
-    
-    
 
 
-        
-=======
-      
->>>>>>> footer
+
+
+
 
 
         </p>
 
-        
-        
-            
-        </div>
+
+
+
+    </div>
 
     </div>
 
     <footer>
-    Charlitos 2021-Git&GitHub    
+        Charlitos 2021-Git&GitHub
     </footer>
-    
+
 </body>
+
 </html>
