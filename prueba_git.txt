@@ -46,3 +46,6 @@ nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anteri
     git log – index.html- Busca los commits en un archivo en específico.
     git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
     git log > log.txt - guardar los logs en un archivo txt
+
+>>línea de prueba desde el editor vi
+
